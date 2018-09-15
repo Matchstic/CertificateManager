@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+	<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'">
+		
+    <title>CertificateManager</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="css/certificates.css">
+	
+	<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+	<script src="js/jquery.min.js"></script>  
+	<script src="js/AppleServices.js"></script>
+	<script src="js/login.js"></script>
+    <script src="js/certificates.js"></script>
+	<script>if (window.module) module = window.module;</script>
+  </head>
+  <body>
+	<div id="titlebar">
+		<p>CertificateManager</p>
+	</div>
+	<div id="background">
+	</div>
+    
+	<!-- Add icon here -->
+    <div id="ui">
+    	<img id="icon" src="img/Icon@2x.png" alt="Application icon" height="75" width="75">
+	
+    	<div id="login-ui">
+    		<p id="login-error"></p>
+			
+    		<form id="login-main-input" onsubmit="return login_no_2fa_submit()">
+    		  <input id="login-username" type="text" name="username" placeholder="example@example.com"><br>
+    		  <input id="login-password" type="password" name="password" placeholder="Password"><br>
+    		  <input class="login-button" type="submit" value="Login">
+    		</form>
+		
+    		<form id="login-2fa-input" onsubmit="return login_2fa_submit()">
+    		  <input id="login-2fa-password" type="password" name="2fa_password" placeholder="App-specific password"><br>
+    		  <input class="login-button" type="submit" value="Login">
+    		</form>
+        
+            <div id="login-spinner" class="spinner">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+              <div class="bar4"></div>
+              <div class="bar5"></div>
+              <div class="bar6"></div>
+              <div class="bar7"></div>
+              <div class="bar8"></div>
+              <div class="bar9"></div>
+              <div class="bar10"></div>
+              <div class="bar11"></div>
+              <div class="bar12"></div>
+            </div>
+		
+    		<p id="login-subtitle">Your Apple ID is only sent to Apple</p>
+    	</div>
+    
+        <div id="certificates-ui">
+        
+            <ul id="certificates-container">
+            </ul>
+            
+            <div id="certificates-spinner" class="spinner">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+              <div class="bar4"></div>
+              <div class="bar5"></div>
+              <div class="bar6"></div>
+              <div class="bar7"></div>
+              <div class="bar8"></div>
+              <div class="bar9"></div>
+              <div class="bar10"></div>
+              <div class="bar11"></div>
+              <div class="bar12"></div>
+            </div>
+    
+        </div>
+    
+    </div>
+
+    <script>
+        var os = require('os');
+        
+        if (os.platform() != "darwin") {
+            $("#titlebar").css("display", "none");
+        }
+    </script>
+  </body>
+</html>

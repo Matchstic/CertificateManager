@@ -1,0 +1,156 @@
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	
+	text-align: center;
+}
+
+html {
+    height: 100%;
+	margin: 0;
+	padding: 0;
+	
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";;
+}
+
+#ui {
+	position: relative;
+    top: 50%;
+    transform: perspective(1px) translateY(-50%);
+}
+
+#titlebar {
+	-webkit-user-select: none;
+  	-webkit-app-region: drag;
+  	margin: 0;
+  	padding: 0;
+  	height: 22px;
+  	width: 100%;
+	top: 0;
+  	position: absolute;
+}
+
+#titlebar p {
+	color: white;
+	margin: 3.5px auto;
+	font-size: 13px;
+}
+
+#background {
+	background-image: linear-gradient(to bottom right, #7B9EC5, #8A68C8);
+	height: 100%;
+	width: 100%;
+	top: 0;
+	position: absolute;
+	z-index: -1;
+}
+
+.spacer {
+	position: relative;
+	height: 22px;
+}
+
+input {
+	height: 30px;
+	margin: 5px;
+	
+    padding: 8px;
+    box-sizing: border-box;
+	outline: none;
+	
+	border-radius: 5px;
+	border-width: 0px;
+	
+	font-size: 16px;
+    line-height: 15px;
+}
+
+input:focus {
+    background-color: #ceceee;
+}
+
+textarea:focus { 
+    background-color: #ceceee;
+}
+
+.spinner {
+  position: relative;
+  width: 54px;
+  height: 54px;
+  display: none;
+  margin: 0 auto;
+  background: transparent;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.spinner div {
+  width: 6%;
+  height: 16%;
+  background: #FFF;
+  position: absolute;
+  left: 36px;
+  top: 32px;
+  opacity: 0;
+  -webkit-border-radius: 50px;
+  -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  -webkit-animation: fade 1s linear infinite;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 1;}
+  to {opacity: 0.25;}
+}
+
+.spinner div.bar1 {
+  -webkit-transform:rotate(0deg) translate(0, -130%);
+  -webkit-animation-delay: 0s;
+}    
+
+.spinner div.bar2 {
+  -webkit-transform:rotate(30deg) translate(0, -130%); 
+  -webkit-animation-delay: -0.9167s;
+}
+
+.spinner div.bar3 {
+  -webkit-transform:rotate(60deg) translate(0, -130%); 
+  -webkit-animation-delay: -0.833s;
+}
+.spinner div.bar4 {
+  -webkit-transform:rotate(90deg) translate(0, -130%); 
+  -webkit-animation-delay: -0.7497s;
+}
+.spinner div.bar5 {
+  -webkit-transform:rotate(120deg) translate(0, -130%); 
+  -webkit-animation-delay: -0.667s;
+}
+.spinner div.bar6 {
+  -webkit-transform:rotate(150deg) translate(0, -130%); 
+  -webkit-animation-delay: -0.5837s;
+}
+.spinner div.bar7 {
+  -webkit-transform:rotate(180deg) translate(0, -130%); 
+  -webkit-animation-delay: -0.5s;
+}
+.spinner div.bar8 {
+  -webkit-transform:rotate(210deg) translate(0, -130%); 
+  -webkit-animation-delay: -0.4167s;
+}
+.spinner div.bar9 {
+  -webkit-transform:rotate(240deg) translate(0, -130%); 
+  -webkit-animation-delay: -0.333s;
+}
+.spinner div.bar10 {
+  -webkit-transform:rotate(270deg) translate(0, -130%); 
+  -webkit-animation-delay: -0.2497s;
+}
+.spinner div.bar11 {
+  -webkit-transform:rotate(300deg) translate(0, -130%); 
+  -webkit-animation-delay: -0.167s;
+}
+.spinner div.bar12 {
+  -webkit-transform:rotate(330deg) translate(0, -130%); 
+  -webkit-animation-delay: -0.0833s;
+}

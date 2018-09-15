@@ -1,0 +1,37 @@
+#login-ui input {
+	width: 50%;
+}
+
+.login-button {
+	margin: 10px 0px 5px 0px !important;
+	width: 30% !important;
+	background-color: #cecece;
+}
+
+.login-button:hover {
+    background-color: #ababab;
+}
+
+.login-button:active {
+  background-color: #ababee;
+}
+
+#login-2fa-input {
+	display: none;
+}
+
+#login-ui p {
+	color: white;
+	font-size: 14px;
+	margin: 4px auto;
+}
+
+#icon {
+	margin: 20px;
+}
+
+#login-error {
+	display: none;
+	width: 50%;
+	color: #8e4040 !important;
+}
