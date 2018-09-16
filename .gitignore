@@ -61,4 +61,4 @@ typings/
 .next
 
 # Builds
-CertificateManager-darwin-x64/
+.build/

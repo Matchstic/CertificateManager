@@ -1,6 +1,7 @@
 {
   "name": "CertificateManager",
   "version": "0.0.1",
+  "author": "Matt Clarke",
   "description": "Manage certificates on iTunes Connect",
   "main": "main.js",
   "scripts": {
